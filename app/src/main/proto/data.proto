@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package data;
+
+option java_package = "com.example.espble.data";
+option java_multiple_files = true;
+
+message DeltaS {
+    uint64 timeFrom = 1;
+    uint64 timeTo   = 2;
+    float  deltaX   = 3;
+    float  deltaY   = 4;
+}
+
+message Ack {
+    uint64 time = 1;
+    double lat  = 2;
+    double lon  = 3;
+}
